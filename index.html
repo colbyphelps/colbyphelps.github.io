@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Colby Phelps | Sales Development & Business Growth</title>
+<meta name="description" content="Colby Phelps - BDR candidate with Fortune 200 operations experience, HubSpot certified, Mercer MBA. See my prospecting portfolio, mock pipeline, and sales strategy.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#08080a;--bg-raised:#111114;--bg-card:#16161a;--bg-card-hover:#1c1c21;--white:#eeeef0;--white-dim:#b0b0b8;--white-muted:#75757e;--accent:#e63946;--accent-soft:rgba(230,57,70,0.12);--accent-glow:rgba(230,57,70,0.06);--green:#2ec4b6;--green-soft:rgba(46,196,182,0.12);--gold:#f4a261;--gold-soft:rgba(244,162,97,0.12);--blue:#4895ef;--blue-soft:rgba(72,149,239,0.12);--border:rgba(255,255,255,0.06);--border-hover:rgba(255,255,255,0.12);--radius:8px;--radius-lg:14px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scrollbar-width:thin;scrollbar-color:var(--accent) var(--bg)}
+body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--white);overflow-x:hidden;line-height:1.65;font-weight:400}
+
+nav{position:fixed;top:0;width:100%;z-index:1000;padding:0 2rem;background:rgba(8,8,10,0.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;height:60px}
+.logo{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800;letter-spacing:2px;color:var(--white);text-decoration:none}
+.logo span{color:var(--accent)}
+.nav-links{display:flex;gap:0.25rem}
+.nav-links a{color:var(--white-muted);text-decoration:none;font-size:0.78rem;letter-spacing:1.5px;text-transform:uppercase;font-weight:500;padding:0.5rem 1rem;border-radius:6px;transition:all 0.2s}
+.nav-links a:hover,.nav-links a.active{color:var(--white);background:rgba(255,255,255,0.05)}
+.mobile-menu{display:none;background:none;border:none;color:var(--white);font-size:1.4rem;cursor:pointer}
+
+.page{display:none;padding-top:60px}
+.page.active{display:block}
+.page-section{min-height:calc(100vh - 60px);padding:4rem 2rem}
+.section-inner{max-width:1100px;margin:0 auto}
+.tag{font-size:0.7rem;letter-spacing:4px;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:0.75rem}
+.heading{font-family:'Syne',sans-serif;font-size:clamp(2rem,4.5vw,3.2rem);font-weight:700;line-height:1.1;margin-bottom:1.5rem;letter-spacing:-0.5px}
+.heading-sm{font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:700;letter-spacing:0;margin-top:3rem;margin-bottom:1.25rem}
+.subtext{color:var(--white-dim);font-size:1rem;max-width:600px;line-height:1.75;margin-bottom:2.5rem}
+
+.hero-wrap{min-height:calc(100vh - 60px);display:flex;align-items:center;padding:0 2rem;position:relative;overflow:hidden}
+.hero-wrap::before{content:'';position:absolute;top:-30%;right:-15%;width:700px;height:700px;background:radial-gradient(circle,var(--accent-glow),transparent 65%);border-radius:50%;pointer-events:none;animation:drift 8s ease-in-out infinite}
+@keyframes drift{0%,100%{transform:translate(0,0)}50%{transform:translate(-30px,20px)}}
+.hero-inner{max-width:1100px;margin:0 auto;width:100%}
+.hero-badge{display:inline-flex;align-items:center;gap:0.5rem;padding:0.4rem 1rem;background:var(--accent-soft);border:1px solid rgba(230,57,70,0.2);border-radius:20px;font-size:0.75rem;font-weight:600;color:var(--accent);letter-spacing:1px;margin-bottom:2rem;opacity:0;animation:fadeUp 0.6s ease forwards 0.1s}
+.hero-badge .pulse{width:6px;height:6px;background:var(--accent);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
+.hero-inner h1{font-family:'Syne',sans-serif;font-size:clamp(2.8rem,7vw,5rem);font-weight:800;line-height:0.95;letter-spacing:-1px;opacity:0;animation:fadeUp 0.7s ease forwards 0.25s}
+.hero-inner h1 .accent{color:var(--accent)}
+.hero-inner h1 .line2{display:block;color:var(--white-dim);font-size:clamp(1.3rem,3.2vw,2.5rem);letter-spacing:0;margin-top:0.5rem;font-weight:600}
+.hero-desc{font-size:1.05rem;color:var(--white-dim);max-width:520px;margin-top:1.5rem;line-height:1.75;opacity:0;animation:fadeUp 0.7s ease forwards 0.45s}
+.hero-cta{display:flex;gap:1rem;margin-top:2.5rem;flex-wrap:wrap;opacity:0;animation:fadeUp 0.7s ease forwards 0.6s}
+@keyframes fadeUp{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:translateY(0)}}
+
+.btn{display:inline-flex;align-items:center;gap:0.5rem;padding:0.85rem 2rem;font-family:'Outfit',sans-serif;font-size:0.8rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;border-radius:var(--radius);transition:all 0.25s}
+.btn-fill{background:var(--accent);color:#fff}
+.btn-fill:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(230,57,70,0.3)}
+.btn-ghost{background:transparent;color:var(--white);border:1.5px solid var(--border-hover)}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+
+.metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0;border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;margin-top:4rem;opacity:0;animation:fadeUp 0.8s ease forwards 0.8s}
+.metric-item{padding:1.8rem 1.5rem;text-align:center;border-right:1px solid var(--border);background:var(--bg-raised)}
+.metric-item:last-child{border-right:none}
+.metric-num{font-family:'Syne',sans-serif;font-size:1.9rem;font-weight:800;color:var(--accent);letter-spacing:0}
+.metric-label{font-size:0.68rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--white-muted);margin-top:0.25rem}
+
+/* ABOUT */
+.about-hero{position:relative;padding:2rem 0 3rem;margin-bottom:2.5rem;border-bottom:1px solid var(--border)}
+.about-hero-text{font-size:1.35rem;color:var(--white);font-weight:500;line-height:1.6;max-width:800px}
+.about-hero-text strong{color:var(--accent);font-weight:700}
+.about-columns{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-bottom:3rem}
+.about-col{padding:2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);position:relative;overflow:hidden}
+.about-col::before{content:'';position:absolute;top:0;left:0;width:100%;height:3px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform 0.4s}
+.about-col:hover::before{transform:scaleX(1)}
+.about-col-tag{font-size:0.65rem;letter-spacing:3px;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:0.75rem}
+.about-col p{font-size:0.9rem;color:var(--white-dim);line-height:1.8}
+.about-col p+p{margin-top:0.75rem}
+.about-col strong{color:var(--white);font-weight:600}
+.about-traits{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.trait-card{padding:1.5rem;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);text-align:center;transition:all 0.3s}
+.trait-card:hover{border-color:var(--border-hover);transform:translateY(-3px)}
+.trait-num{font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;color:var(--accent);margin-bottom:0.5rem}
+.trait-title{font-family:'Syne',sans-serif;font-size:0.88rem;font-weight:700;margin-bottom:0.4rem;letter-spacing:0}
+.trait-text{font-size:0.78rem;color:var(--white-muted);line-height:1.6}
+
+/* EXPERIENCE */
+.exp-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:2rem;margin-bottom:1.25rem;transition:all 0.3s;position:relative;overflow:hidden}
+.exp-card::before{content:'';position:absolute;left:0;top:0;width:3px;height:0;background:var(--accent);transition:height 0.4s}
+.exp-card:hover::before{height:100%}
+.exp-card:hover{border-color:var(--border-hover);background:var(--bg-card-hover)}
+.exp-header{display:flex;justify-content:space-between;align-items:start;gap:1rem;margin-bottom:1rem}
+.exp-role{font-family:'Syne',sans-serif;font-size:1.2rem;font-weight:700;letter-spacing:0}
+.exp-company{color:var(--accent);font-weight:600;font-size:0.82rem;letter-spacing:1px;text-transform:uppercase;margin-top:0.2rem}
+.exp-location{font-size:0.75rem;color:var(--white-muted);margin-top:0.15rem}
+.exp-date{font-size:0.78rem;color:var(--white-muted);white-space:nowrap;padding-top:0.2rem}
+.exp-bullets{display:flex;flex-direction:column;gap:0.85rem}
+.exp-bullet{display:flex;gap:0.75rem;font-size:0.88rem;color:var(--white-dim);line-height:1.7}
+.exp-bullet .num{color:var(--accent);font-family:'Syne',sans-serif;font-weight:700;font-size:0.92rem;min-width:55px;flex-shrink:0;padding-top:2px;letter-spacing:0}
+
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.25rem}
+.proj-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:2rem;transition:all 0.35s;position:relative;overflow:hidden}
+.proj-card::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:3px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform 0.35s}
+.proj-card:hover::after{transform:scaleX(1)}
+.proj-card:hover{border-color:var(--border-hover);transform:translateY(-3px)}
+.proj-type{font-size:0.65rem;letter-spacing:3px;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:0.75rem}
+.proj-name{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:0.75rem;line-height:1.2;letter-spacing:0}
+.proj-desc{font-size:0.85rem;color:var(--white-muted);line-height:1.7}
+.proj-result{margin-top:1.25rem;padding-top:1.25rem;border-top:1px solid var(--border)}
+.proj-result-label{font-size:0.65rem;letter-spacing:2px;text-transform:uppercase;color:var(--white-muted)}
+.proj-result-val{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;color:var(--accent);margin-top:0.2rem;letter-spacing:0}
+
+/* PROSPECTING */
+.prospect-section{margin-bottom:3rem}
+.prospect-section h3{font-family:'Syne',sans-serif;font-size:1.2rem;font-weight:700;margin-bottom:1.25rem;display:flex;align-items:center;gap:0.5rem;letter-spacing:0}
+.prospect-section h3 .icon{color:var(--accent)}
+.target-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:0.75rem}
+.target-card{padding:1rem 1.25rem;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);transition:all 0.25s}
+.target-card:hover{border-color:var(--border-hover)}
+.target-name{font-weight:600;font-size:0.9rem;margin-bottom:0.15rem}
+.target-detail{font-size:0.78rem;color:var(--white-muted)}
+.persona-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem}
+.persona-card{padding:1.5rem;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg)}
+.persona-title{font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;margin-bottom:0.5rem;letter-spacing:0}
+.persona-sub{color:var(--accent);font-size:0.78rem;font-weight:600;letter-spacing:0.5px;margin-bottom:0.75rem}
+.persona-points{font-size:0.82rem;color:var(--white-dim);line-height:1.7}
+.email-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.5rem 2rem;margin-bottom:1rem}
+.email-meta{display:flex;gap:2rem;margin-bottom:1rem;font-size:0.78rem;color:var(--white-muted);flex-wrap:wrap}
+.email-meta span strong{color:var(--white-dim)}
+.email-subject{font-family:'Syne',sans-serif;font-weight:700;font-size:0.95rem;margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid var(--border);letter-spacing:0}
+.email-body{font-size:0.88rem;color:var(--white-dim);line-height:1.8}
+.email-body p+p{margin-top:0.75rem}
+.email-label{display:inline-block;padding:0.2rem 0.6rem;background:var(--accent-soft);color:var(--accent);font-size:0.65rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;border-radius:4px;margin-bottom:0.75rem}
+
+/* DM */
+.dm-sequence{display:grid;grid-template-columns:1fr;gap:0}
+.dm-step{padding:1.5rem 2rem;background:var(--bg-card);border:1px solid var(--border);border-bottom:none;position:relative;padding-left:4.5rem}
+.dm-step:first-child{border-radius:var(--radius-lg) var(--radius-lg) 0 0}
+.dm-step:last-child{border-bottom:1px solid var(--border);border-radius:0 0 var(--radius-lg) var(--radius-lg)}
+.dm-day{position:absolute;left:1.5rem;top:1.5rem;font-family:'Syne',sans-serif;font-weight:800;font-size:0.7rem;color:var(--accent);letter-spacing:1px;text-transform:uppercase;width:2.5rem}
+.dm-label{font-family:'Syne',sans-serif;font-weight:700;font-size:0.82rem;letter-spacing:0;margin-bottom:0.5rem;color:var(--white)}
+.dm-text{font-size:0.85rem;color:var(--white-dim);line-height:1.75;font-style:italic}
+.dm-why{margin-top:0.5rem;font-size:0.78rem;color:var(--white-muted);line-height:1.6;font-style:normal}
+
+/* PIPELINE */
+.pipeline-funnel{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1rem;margin-bottom:2.5rem}
+.funnel-stage{text-align:center;padding:1.5rem 1rem;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);position:relative}
+.funnel-num{font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;color:var(--accent);letter-spacing:0}
+.funnel-label{font-size:0.68rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--white-muted);margin-top:0.25rem}
+.funnel-arrow{position:absolute;right:-14px;top:50%;transform:translateY(-50%);color:var(--white-muted);font-size:1.2rem;z-index:1}
+.pipeline-breakdown{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.breakdown-card{padding:1.5rem;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg)}
+.breakdown-title{font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;margin-bottom:1rem;letter-spacing:0}
+.breakdown-item{display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--border);font-size:0.85rem}
+.breakdown-item:last-child{border-bottom:none}
+.breakdown-item .label{color:var(--white-dim)}
+.breakdown-item .value{font-weight:600;color:var(--white)}
+.breakdown-item .value.good{color:var(--green)}
+.breakdown-item .value.warn{color:var(--gold)}
+
+/* PITCH - REDESIGNED */
+.pitch-hero{display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center;padding:2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);margin-bottom:2.5rem;position:relative;overflow:hidden}
+.pitch-hero::before{content:'';position:absolute;left:0;top:0;width:4px;height:100%;background:var(--accent)}
+.pitch-hero-info .pitch-company-name{font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:800;letter-spacing:0}
+.pitch-hero-info .pitch-company-desc{font-size:0.85rem;color:var(--white-dim);margin-top:0.3rem;line-height:1.6}
+.pitch-hero-stats{display:flex;gap:1.5rem}
+.pitch-stat{text-align:center}
+.pitch-stat-val{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:800;color:var(--accent)}
+.pitch-stat-label{font-size:0.62rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--white-muted);margin-top:0.15rem}
+
+.pitch-sections{display:flex;flex-direction:column;gap:1.5rem}
+.pitch-card{padding:0;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;transition:all 0.3s}
+.pitch-card:hover{border-color:var(--border-hover)}
+.pitch-card-header{display:flex;align-items:center;gap:0.75rem;padding:1.25rem 1.5rem;border-bottom:1px solid var(--border);background:rgba(255,255,255,0.01)}
+.pitch-card-icon{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:0.85rem;font-weight:800;flex-shrink:0}
+.pitch-card-icon.red{background:var(--accent-soft);color:var(--accent)}
+.pitch-card-icon.green{background:var(--green-soft);color:var(--green)}
+.pitch-card-icon.gold{background:var(--gold-soft);color:var(--gold)}
+.pitch-card-icon.blue{background:var(--blue-soft);color:var(--blue)}
+.pitch-card-label{font-family:'Syne',sans-serif;font-weight:700;font-size:0.92rem;letter-spacing:0}
+.pitch-card-body{padding:1.5rem;font-size:0.85rem;color:var(--white-dim);line-height:1.8}
+.pitch-card-body p+p{margin-top:0.75rem}
+.pitch-card-body strong{color:var(--white);font-weight:600}
+
+/* Email sequence inside pitch */
+.pitch-email-seq{display:grid;grid-template-columns:1fr;gap:0;margin:0.5rem 0}
+.pitch-email-step{display:grid;grid-template-columns:70px 1fr;gap:0;border-bottom:1px solid var(--border)}
+.pitch-email-step:last-child{border-bottom:none}
+.pitch-email-day{padding:1rem 0.75rem;display:flex;flex-direction:column;align-items:center;justify-content:center;border-right:1px solid var(--border)}
+.pitch-email-day-num{font-family:'Syne',sans-serif;font-weight:800;font-size:1.1rem;color:var(--accent)}
+.pitch-email-day-label{font-size:0.6rem;letter-spacing:1px;text-transform:uppercase;color:var(--white-muted)}
+.pitch-email-content{padding:1rem 1.25rem}
+.pitch-email-subj{font-weight:600;font-size:0.85rem;margin-bottom:0.4rem}
+.pitch-email-body{font-size:0.82rem;color:var(--white-muted);line-height:1.7}
+
+/* Objection cards */
+.objection-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:0.5rem 0}
+.objection-card{padding:1.25rem;border:1px solid var(--border);border-radius:var(--radius);background:rgba(255,255,255,0.01)}
+.objection-q{font-weight:600;font-size:0.85rem;color:var(--accent);margin-bottom:0.5rem;font-style:italic}
+.objection-a{font-size:0.82rem;color:var(--white-dim);line-height:1.7}
+
+/* Ramp timeline */
+.ramp-timeline{position:relative;padding-left:2.5rem}
+.ramp-timeline::before{content:'';position:absolute;left:8px;top:0;bottom:0;width:2px;background:var(--border)}
+.ramp-phase{position:relative;padding:1rem 0 1.5rem;padding-left:1.5rem}
+.ramp-phase::before{content:'';position:absolute;left:-2.5rem;top:1.2rem;width:18px;height:18px;border-radius:50%;border:2px solid var(--accent);background:var(--bg)}
+.ramp-phase.active::before{background:var(--accent)}
+.ramp-phase-label{font-family:'Syne',sans-serif;font-weight:700;font-size:0.88rem;color:var(--accent);letter-spacing:0;margin-bottom:0.3rem}
+.ramp-phase-text{font-size:0.82rem;color:var(--white-dim);line-height:1.7}
+.ramp-phase-target{display:inline-block;margin-top:0.4rem;padding:0.2rem 0.6rem;background:var(--green-soft);color:var(--green);font-size:0.68rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;border-radius:4px}
+
+/* SKILLS */
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem}
+.skill-group{padding:1.5rem;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg)}
+.skill-group-title{font-family:'Syne',sans-serif;font-weight:700;font-size:0.88rem;color:var(--accent);letter-spacing:1px;margin-bottom:1rem}
+.skill-item{display:flex;justify-content:space-between;align-items:center;padding:0.5rem 0;border-bottom:1px solid var(--border);font-size:0.85rem}
+.skill-item:last-child{border-bottom:none}
+.skill-name{color:var(--white-dim)}
+.skill-how{font-size:0.72rem;color:var(--white-muted);max-width:55%;text-align:right}
+.cert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-top:2rem}
+.cert-card{padding:1.25rem;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius)}
+.cert-name{font-weight:600;font-size:0.88rem;margin-bottom:0.2rem}
+.cert-issuer{font-size:0.78rem;color:var(--accent);font-weight:500}
+.cert-status{font-size:0.7rem;color:var(--white-muted);margin-top:0.3rem}
+.edu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.25rem}
+.edu-card{padding:2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg)}
+.edu-degree{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:0.25rem;letter-spacing:0}
+.edu-school{color:var(--accent);font-weight:600;font-size:0.8rem;letter-spacing:1px;text-transform:uppercase}
+.edu-date{font-size:0.78rem;color:var(--white-muted);margin-top:0.4rem}
+.edu-detail{margin-top:0.75rem;font-size:0.85rem;color:var(--white-dim);line-height:1.7}
+.lead-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.25rem}
+.lead-card{padding:2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);transition:all 0.3s}
+.lead-card:hover{border-color:var(--border-hover)}
+.lead-role{font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:700;letter-spacing:0}
+.lead-org{color:var(--accent);font-weight:600;font-size:0.8rem;letter-spacing:1px;text-transform:uppercase;margin-top:0.15rem}
+.lead-date{font-size:0.78rem;color:var(--white-muted);margin-top:0.3rem}
+.lead-desc{margin-top:0.75rem;font-size:0.85rem;color:var(--white-dim);line-height:1.75}
+
+.contact-center{text-align:center;max-width:600px;margin:0 auto;padding-top:4rem}
+.contact-links{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;margin-top:2rem}
+.contact-link{display:inline-flex;align-items:center;gap:0.5rem;padding:0.85rem 1.8rem;border:1px solid var(--border);color:var(--white);text-decoration:none;font-size:0.82rem;font-weight:500;letter-spacing:1px;border-radius:var(--radius);transition:all 0.25s}
+.contact-link:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-soft);transform:translateY(-2px)}
+.avail-badge{display:inline-block;margin-top:1.5rem;padding:0.5rem 1.25rem;background:var(--green-soft);border:1px solid rgba(46,196,182,0.2);border-radius:20px;font-size:0.78rem;font-weight:600;color:var(--green)}
+.avail-note{font-size:0.82rem;color:var(--white-muted);margin-top:0.75rem}
+
+footer{text-align:center;padding:2rem;font-size:0.72rem;color:var(--white-muted);letter-spacing:1px;border-top:1px solid var(--border)}
+
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 0.7s ease,transform 0.7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+@media(max-width:768px){
+nav{padding:0 1rem}
+.nav-links{display:none;position:absolute;top:60px;left:0;width:100%;background:rgba(8,8,10,0.97);flex-direction:column;padding:1rem;border-bottom:1px solid var(--border)}
+.nav-links.open{display:flex}
+.mobile-menu{display:block}
+.hero-wrap,.page-section{padding-left:1.25rem;padding-right:1.25rem}
+.about-columns,.pipeline-breakdown,.objection-grid{grid-template-columns:1fr}
+.about-traits{grid-template-columns:1fr}
+.metric-item{padding:1.2rem 0.75rem}
+.exp-header{flex-direction:column}
+.funnel-arrow{display:none}
+.pitch-hero{grid-template-columns:1fr}
+.pitch-hero-stats{justify-content:flex-start}
+}
+</style>
+</head>
+<body>
+
+<nav>
+<div class="nav-inner">
+<a href="#" class="logo" onclick="showPage('home');return false">COLBY<span>.</span></a>
+<button class="mobile-menu" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu">&#9776;</button>
+<div class="nav-links">
+<a href="#" onclick="showPage('home');return false" class="active" data-page="home">Home</a>
+<a href="#" onclick="showPage('about');return false" data-page="about">About</a>
+<a href="#" onclick="showPage('experience');return false" data-page="experience">Experience</a>
+<a href="#" onclick="showPage('prospecting');return false" data-page="prospecting">Prospecting</a>
+<a href="#" onclick="showPage('pipeline');return false" data-page="pipeline">Pipeline</a>
+<a href="#" onclick="showPage('pitch');return false" data-page="pitch">Sales Pitch</a>
+<a href="#" onclick="showPage('skills');return false" data-page="skills">Skills</a>
+<a href="#" onclick="showPage('contact');return false" data-page="contact">Contact</a>
+</div>
+</div>
+</nav>
+
+<!-- HOME -->
+<div class="page active" id="page-home">
+<div class="hero-wrap">
+<div class="hero-inner">
+<div class="hero-badge"><span class="pulse"></span> Open to Summer 2026 Opportunities</div>
+<h1>I generate <span class="accent">pipeline.</span><span class="line2">Not just conversations.</span></h1>
+<p class="hero-desc">Mercer MBA candidate with Fortune 200 operations leadership. HubSpot certified across three disciplines. Salesforce trained. I don't just understand sales - I understand the business behind the sale: supply chains, margins, fulfillment, and the cost of getting it wrong.</p>
+<div class="hero-cta">
+<a href="#" class="btn btn-fill" onclick="showPage('prospecting');return false">View My Prospecting Work &#8594;</a>
+<a href="#" class="btn btn-ghost" onclick="showPage('pipeline');return false">See My Pipeline Results</a>
+</div>
+<div class="metrics">
+<div class="metric-item"><div class="metric-num">$20K+</div><div class="metric-label">Inventory Recovered</div></div>
+<div class="metric-item"><div class="metric-num">50-125%</div><div class="metric-label">Above Throughput Target</div></div>
+<div class="metric-item"><div class="metric-num">30</div><div class="metric-label">Person Teams Led</div></div>
+<div class="metric-item"><div class="metric-num">3x</div><div class="metric-label">HubSpot Certified</div></div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ABOUT -->
+<div class="page" id="page-about">
+<div class="page-section">
+<div class="section-inner">
+<div class="tag reveal">Why Sales, Why Now</div>
+<h2 class="heading reveal">The Short Version</h2>
+<div class="about-hero reveal">
+<div class="about-hero-text">Most BDR candidates come from a sales background. I come from <strong>operations inside a Fortune 200 company</strong>, and that is my edge. I've stood on the warehouse floor, led 30-person teams under daily production pressure, and recovered $20K+ in lost inventory with a scanner in my hand. That means when I pick up the phone to prospect, I'm not reading a script - I'm speaking from experience that buyers can feel.</div>
+</div>
+<div class="about-columns reveal">
+<div class="about-col">
+<div class="about-col-tag">The Operations Foundation</div>
+<p>At <strong>Tractor Supply Company</strong>, I ran daily shift operations for a distribution center serving 2,000+ stores. I audited 500+ bin locations, coached floor teams on root-cause prevention, and drove fill rates to 99%. I sustained throughput 50-125% above target by reading production data the same way a BDR reads a pipeline dashboard - find the bottleneck, reallocate resources, keep the numbers moving.</p>
+<p>At <strong>Premier Color Group</strong>, I redesigned production scheduling to cut lead times by 8% and became the go-to trainer for new hires within 90 days. Nobody asked me to do either of those things.</p>
+</div>
+<div class="about-col">
+<div class="about-col-tag">The Sales Transition</div>
+<p>Operations taught me what happens after the deal closes: how fulfillment breaks, what margin erosion looks like, and why the best salespeople understand the entire business, not just their quota. That's the lens I bring to business development.</p>
+<p>I'm now <strong>HubSpot certified across three disciplines</strong>, building toward my <strong>Salesforce SDR credential</strong>, and completing an accelerated MBA at Mercer with a concentration in <strong>Entrepreneurship and Innovation</strong>. I've already run real cold outreach campaigns and built the prospecting portfolio on this site from scratch. I didn't wait for a job to start doing the work.</p>
+</div>
+</div>
+<div class="about-traits reveal">
+<div class="trait-card"><div class="trait-num">#1</div><div class="trait-title">Competitive by Nature</div><div class="trait-text">Led Team Digby to #1 ranking in Capsim: 19% market share, $15M cumulative profit across 8 rounds.</div></div>
+<div class="trait-card"><div class="trait-num">125%</div><div class="trait-title">Built for Targets</div><div class="trait-text">Sustained throughput 50-125% above target daily at a Fortune 200. Controlled chaos is where I'm sharpest.</div></div>
+<div class="trait-card"><div class="trait-num">100+</div><div class="trait-title">Communicator First</div><div class="trait-text">Presented to 100+ students with Traffick Jam. Coordinated events for a 50+ member fraternity as Social Chair.</div></div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- EXPERIENCE -->
+<div class="page" id="page-experience">
+<div class="page-section">
+<div class="section-inner">
+<div class="tag reveal">Where I've Delivered</div>
+<h2 class="heading reveal">Experience</h2>
+<div class="exp-card reveal">
+<div class="exp-header"><div><div class="exp-role">Supply Chain Intern</div><div class="exp-company">Tractor Supply Company</div><div class="exp-location">Macon, GA</div></div><div class="exp-date">May 2025 - Aug. 2025</div></div>
+<div class="exp-bullets">
+<div class="exp-bullet"><span class="num">$20K+</span><span>Recovered misplaced inventory by auditing 500+ bin locations and coaching floor staff on root-cause prevention, eliminating a recurring source of shrinkage. This wasn't a one-time fix - I built a repeatable audit process that floor supervisors continued using after my internship ended.</span></div>
+<div class="exp-bullet"><span class="num">99%</span><span>Lifted distribution fill rates from 96-97% to 98-99% by coordinating across logistics, merchandising, and receiving teams, reducing stockouts across a 2,000+ store retail network. The challenge was aligning three departments that historically operated in silos - I ran daily cross-functional standups to keep everyone synced on priority SKUs.</span></div>
+<div class="exp-bullet"><span class="num">125%+</span><span>Led daily shift planning for a 20-30 person team, using throughput data to forecast volume and allocate labor, sustaining a Units-Per-Hour rate 50-125% above target. I learned to read production data the way a BDR reads CRM dashboards - spot the bottleneck, reallocate resources, and keep the numbers moving.</span></div>
+</div>
+</div>
+<div class="exp-card reveal">
+<div class="exp-header"><div><div class="exp-role">Production Operations Associate</div><div class="exp-company">Premier Color Group</div><div class="exp-location">Williamston, SC</div></div><div class="exp-date">June 2024 - May 2025</div></div>
+<div class="exp-bullets">
+<div class="exp-bullet"><span class="num">90 Days</span><span>Learned full warehouse operations from raw-material intake to finished-goods shipping in under 90 days, then voluntarily took on training responsibilities for every new hire on the complete production workflow. By month four, I was the person supervisors sent new employees to when they needed someone brought up to speed fast.</span></div>
+<div class="exp-bullet"><span class="num">-8%</span><span>Redesigned the production priority matrix to sequence orders by margin and deadline, cutting average order lead time by 8% and improving on-time delivery. The previous system treated all orders equally - I built a simple ranking framework that prioritized high-margin, time-sensitive jobs so the floor team always knew what to run next.</span></div>
+</div>
+</div>
+<h2 class="heading-sm reveal">Projects</h2>
+<div class="projects-grid">
+<div class="proj-card reveal"><div class="proj-type">Business Simulation</div><div class="proj-name">Capsim Strategy Lead, Team Digby</div><div class="proj-desc">Led cross-functional strategy across R&D, marketing, production, and finance for 8 competitive rounds. Managed two product lines through market drift, competitive pricing pressure, and capacity constraints. Made the case for aggressive early R&D investment that cost us short-term margin but compounded into dominant positioning by the final rounds.</div><div class="proj-result"><div class="proj-result-label">Result</div><div class="proj-result-val">19% Market Share, #1 Ranking, $15M Profit</div></div></div>
+<div class="proj-card reveal"><div class="proj-type">Supply Chain Strategy</div><div class="proj-name">Georgia Fresh Link Logistics</div><div class="proj-desc">Modeled a $450K cold-chain startup serving Georgia's agricultural sector. Built the full financial model, break-even analysis, and route optimization strategy. Identified that consolidating last-mile delivery routes through regional hubs could cut transport costs 20% while maintaining cold-chain integrity for perishable goods.</div><div class="proj-result"><div class="proj-result-label">Deliverable</div><div class="proj-result-val">Full Business Plan to Profitability in 12 Months</div></div></div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- PROSPECTING -->
+<div class="page" id="page-prospecting">
+<div class="page-section">
+<div class="section-inner">
+<div class="tag reveal">This Is How I'd Sell</div>
+<h2 class="heading reveal">Prospecting Portfolio</h2>
+<p class="subtext reveal">This section demonstrates how I research, target, and engage prospects. Every piece below was built from scratch to show how I think about outbound sales development.</p>
+<div class="prospect-section reveal">
+<h3><span class="icon">&#9679;</span> Target Account List</h3>
+<p style="font-size:0.85rem;color:var(--white-muted);margin-bottom:1rem">Mid-market B2B SaaS companies in the Southeast with 50-500 employees, active hiring signals, and products where operational credibility strengthens the sales conversation.</p>
+<div class="target-grid">
+<div class="target-card"><div class="target-name">Deposco</div><div class="target-detail">Supply Chain SaaS, Alpharetta GA</div></div>
+<div class="target-card"><div class="target-name">Incident IQ</div><div class="target-detail">IT Service Management, Atlanta GA</div></div>
+<div class="target-card"><div class="target-name">Greenlight Guru</div><div class="target-detail">MedDevice QMS, Atlanta GA</div></div>
+<div class="target-card"><div class="target-name">Calendly</div><div class="target-detail">Scheduling Platform, Atlanta GA</div></div>
+<div class="target-card"><div class="target-name">Salesloft</div><div class="target-detail">Sales Engagement, Atlanta GA</div></div>
+<div class="target-card"><div class="target-name">Terminus</div><div class="target-detail">ABM Platform, Atlanta GA</div></div>
+<div class="target-card"><div class="target-name">Rithum</div><div class="target-detail">E-Commerce SaaS, Atlanta GA</div></div>
+<div class="target-card"><div class="target-name">Cardlytics</div><div class="target-detail">Purchase Intelligence, Atlanta GA</div></div>
+<div class="target-card"><div class="target-name">FullStory</div><div class="target-detail">Digital Experience, Atlanta GA</div></div>
+<div class="target-card"><div class="target-name">Tricentis</div><div class="target-detail">Software Testing, Atlanta GA</div></div>
+</div>
+</div>
+<div class="prospect-section reveal">
+<h3><span class="icon">&#9679;</span> Buyer Personas</h3>
+<div class="persona-grid">
+<div class="persona-card"><div class="persona-title">VP of Sales</div><div class="persona-sub">Primary Decision Maker</div><div class="persona-points">Cares about: pipeline velocity, rep ramp time, forecast accuracy. Pain: inconsistent outbound results, high BDR turnover. Motivated by: predictable revenue growth and reps who understand the full funnel.</div></div>
+<div class="persona-card"><div class="persona-title">Revenue Operations Manager</div><div class="persona-sub">Technical Influencer</div><div class="persona-points">Cares about: CRM hygiene, data quality, process consistency. Pain: reps who ignore workflows. Motivated by: candidates who already know Salesforce and HubSpot and can follow a playbook without hand-holding.</div></div>
+<div class="persona-card"><div class="persona-title">Director of SDR/BDR Team</div><div class="persona-sub">Hiring Manager</div><div class="persona-points">Cares about: activity volume, coachability, attitude. Pain: candidates with no urgency or commercial instinct. Motivated by: someone who shows up having already done the research and built outbound sequences unprompted.</div></div>
+</div>
+</div>
+<div class="prospect-section reveal">
+<h3><span class="icon">&#9679;</span> Cold Email Samples</h3>
+<div class="email-card"><div class="email-label">Personalized - Supply Chain SaaS</div><div class="email-meta"><span><strong>To:</strong> VP of Sales at Deposco</span><span><strong>From:</strong> Colby Phelps</span></div><div class="email-subject">Quick question about your warehouse clients</div><div class="email-body"><p>Hi [Name],</p><p>I spent last summer inside a Tractor Supply distribution center auditing bin locations, coaching floor teams, and recovering $20K+ in misplaced inventory. One thing I kept seeing: the gap between what the WMS said and what was actually on the shelf.</p><p>That experience is exactly why Deposco's approach to real-time inventory visibility caught my attention. I'd imagine your prospects deal with the same disconnect I saw firsthand.</p><p>Would it make sense to connect for 15 minutes? I'm building my career in sales development and I'd bring the kind of operational credibility that makes outbound conversations with warehouse leaders feel genuine, not scripted.</p><p>Best,<br>Colby</p></div></div>
+<div class="email-card"><div class="email-label">Value-Led - Revenue Platform</div><div class="email-meta"><span><strong>To:</strong> Director of BDR Team</span><span><strong>From:</strong> Colby Phelps</span></div><div class="email-subject">Most BDR candidates send resumes. I built a pipeline simulation.</div><div class="email-body"><p>Hi [Name],</p><p>Before applying, I built a 30-day mock pipeline: 200 contacts reached, 400+ touchpoints executed, 26 conversations generated. Not because someone told me to, but because I wanted to understand what realistic outbound performance looks like before day one.</p><p>I'm HubSpot certified in three disciplines, building toward Salesforce SDR credentials, and finishing an MBA at Mercer. More importantly, I led 20-30 person teams at a Fortune 200 company, so I know how to operate under pressure and hit targets.</p><p>I'd love 15 minutes to walk you through my approach.</p><p>Best,<br>Colby</p></div></div>
+<div class="email-card"><div class="email-label">Breakup Email - Final Touch</div><div class="email-meta"><span><strong>To:</strong> Any unresponsive prospect</span><span><strong>From:</strong> Colby Phelps</span></div><div class="email-subject">Closing the loop</div><div class="email-body"><p>Hi [Name],</p><p>I've reached out a few times and haven't heard back, so I want to respect your time. If the timing isn't right, no hard feelings. I'll keep building and stay on your radar.</p><p>If anything changes, I'm always a reply away.</p><p>Best,<br>Colby</p></div></div>
+</div>
+<div class="prospect-section reveal">
+<h3><span class="icon">&#9679;</span> LinkedIn Outreach Sequence</h3>
+<p style="font-size:0.85rem;color:var(--white-muted);margin-bottom:1.25rem">Each message is designed to earn the next response, not close the deal. The sequence builds credibility through specificity, offers value before asking, and gives the prospect an easy exit at every step.</p>
+<div class="dm-sequence">
+<div class="dm-step"><div class="dm-day">Day 1</div><div class="dm-label">Connection request (with note)</div><div class="dm-text">"Hi [Name], I noticed [Company] is scaling its outbound team - [specific signal: job posting, LinkedIn post, product launch]. I'm an MBA candidate at Mercer with operations experience at Tractor Supply (Fortune 200) and I'm building toward a career in sales development. Would value the connection."</div><div class="dm-why">Why it works: leads with their company, not me. The specific signal proves I researched them. Mentioning Fortune 200 in the first touch builds instant credibility without bragging.</div></div>
+<div class="dm-step"><div class="dm-day">Day 4</div><div class="dm-label">Value-first follow-up</div><div class="dm-text">"Thanks for connecting. I put together a quick breakdown of how I'd approach outbound into [their ICP/vertical] based on my experience inside distribution operations. It's one page - happy to share if you'd find it useful. No strings attached."</div><div class="dm-why">Why it works: offers something concrete before asking for anything. "No strings attached" removes pressure. The one-page format signals I respect their time.</div></div>
+<div class="dm-step"><div class="dm-day">Day 8</div><div class="dm-label">Specific ask with an easy out</div><div class="dm-text">"I know you're busy so I'll keep this short: would a 10-minute call make sense to discuss what a strong summer BDR hire looks like for your team? If the timing's off, no worries at all - I'll keep building and stay visible."</div><div class="dm-why">Why it works: "10 minutes" is a specific, small commitment. "If the timing's off" gives them a graceful exit that doesn't burn the bridge. "Stay visible" signals long-game thinking, not desperation.</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- PIPELINE -->
+<div class="page" id="page-pipeline">
+<div class="page-section">
+<div class="section-inner">
+<div class="tag reveal">Real Outreach, Real Numbers</div>
+<h2 class="heading reveal">Alumni Outreach Campaign Results</h2>
+<p class="subtext reveal">As Social Chair of Phi Delta Theta, I ran a multi-channel outreach campaign to re-engage 200 alumni for chapter fundraising and event sponsorship. This was real cold outreach to professionals who hadn't engaged with the chapter in years.</p>
+<div class="pipeline-funnel reveal">
+<div class="funnel-stage"><div class="funnel-num">200</div><div class="funnel-label">Alumni Contacted</div><span class="funnel-arrow">&#8594;</span></div>
+<div class="funnel-stage"><div class="funnel-num">425</div><div class="funnel-label">Total Touchpoints</div><span class="funnel-arrow">&#8594;</span></div>
+<div class="funnel-stage"><div class="funnel-num">42%</div><div class="funnel-label">Open Rate</div><span class="funnel-arrow">&#8594;</span></div>
+<div class="funnel-stage"><div class="funnel-num">26</div><div class="funnel-label">Conversations</div><span class="funnel-arrow">&#8594;</span></div>
+<div class="funnel-stage"><div class="funnel-num">11</div><div class="funnel-label">Commitments</div></div>
+</div>
+<div class="pipeline-breakdown reveal">
+<div class="breakdown-card"><div class="breakdown-title">Activity Breakdown</div>
+<div class="breakdown-item"><span class="label">Cold emails sent (2-3 step sequences)</span><span class="value">280</span></div>
+<div class="breakdown-item"><span class="label">Cold calls made</span><span class="value">85</span></div>
+<div class="breakdown-item"><span class="label">LinkedIn messages sent</span><span class="value">60</span></div>
+<div class="breakdown-item"><span class="label">Total touchpoints</span><span class="value">425</span></div>
+<div class="breakdown-item"><span class="label">Avg. touchpoints per contact</span><span class="value">2.1</span></div>
+</div>
+<div class="breakdown-card"><div class="breakdown-title">Conversion Metrics</div>
+<div class="breakdown-item"><span class="label">Email open rate</span><span class="value good">42%</span></div>
+<div class="breakdown-item"><span class="label">Email reply rate</span><span class="value good">9.2%</span></div>
+<div class="breakdown-item"><span class="label">Call connect rate</span><span class="value warn">14%</span></div>
+<div class="breakdown-item"><span class="label">Conversation-to-commitment</span><span class="value good">42%</span></div>
+<div class="breakdown-item"><span class="label">Overall conversion rate</span><span class="value good">5.5%</span></div>
+</div>
+</div>
+<div style="margin-top:2.5rem" class="reveal">
+<div class="breakdown-card"><div class="breakdown-title">The Campaign: What I Did and Why</div>
+<div style="font-size:0.88rem;color:var(--white-dim);line-height:1.85;padding:0.5rem 0">
+<p><strong style="color:var(--white)">The objective:</strong> Drive alumni engagement for chapter events and secure sponsorship commitments for our annual fundraising campaign. The challenge: most of these alumni hadn't engaged with the chapter in 2-10+ years. I was reaching out cold to professionals who had no reason to respond to an undergraduate they'd never met.</p>
+<p style="margin-top:1rem"><strong style="color:var(--white)">Sourcing the list:</strong> I built the initial contact list from chapter records, LinkedIn, and alumni directories. I segmented the 200 contacts into three tiers: Tier 1 (recent grads, 1-5 years out, most likely to engage), Tier 2 (mid-career, 5-15 years out, higher giving capacity), and Tier 3 (senior alumni, 15+ years out, hardest to reach but highest potential value). Each tier got a different messaging angle.</p>
+<p style="margin-top:1rem"><strong style="color:var(--white)">Email framework:</strong> I kept every email under 100 words. The structure: (1) one sentence establishing the shared Phi Delt connection, (2) one sentence about what the chapter is doing now that they'd care about, (3) a specific, low-commitment ask. Subject lines were short and personal - "[First Name], quick update from Georgia Delta" outperformed generic subject lines by roughly 2x on open rates. I A/B tested subject lines across the tiers and iterated after the first 50 sends.</p>
+<p style="margin-top:1rem"><strong style="color:var(--white)">Cold call approach:</strong> For Tier 1 and Tier 2 contacts who opened emails but didn't reply, I called directly. My opener acknowledged the cold nature of the call and asked for 30 seconds. The key insight: leading with a chapter update before making any ask dramatically increased willingness to stay on the line.</p>
+<p style="margin-top:1rem"><strong style="color:var(--white)">What I learned that translates directly to BDR work:</strong> Personalization is the single highest-leverage activity in outreach. The emails where I referenced something specific about the alumnus converted at nearly 3x the rate of templated messages. Follow-up timing mattered more than follow-up frequency - Day 3-4 follow-ups consistently outperformed Day 1-2 follow-ups. And the most valuable commitments came from contacts who initially ignored my first message but responded to a well-timed, non-pushy second touch. Persistence without pressure is the framework that works.</p>
+</div></div>
+</div>
+<div style="margin-top:2rem" class="reveal">
+<div class="breakdown-card"><div class="breakdown-title">How This Scales to a BDR Role</div>
+<div style="font-size:0.88rem;color:var(--white-dim);line-height:1.85;padding:0.5rem 0">
+<p>The mechanics are identical. The alumni campaign required me to build a segmented list, write personalized multi-touch sequences, make cold calls to people who didn't know me, handle objections, track activity and conversions, and iterate on messaging based on what was converting. The only difference between this and enterprise BDR work is the product being sold. The outreach muscles - research, personalization, persistence, conversion tracking - are the same.</p>
+<p style="margin-top:0.75rem">In a BDR seat, I'd apply the same tiered approach: prioritize accounts by likelihood to convert and potential deal size, personalize every first touch, and use engagement signals (email opens, LinkedIn views) to decide who gets a follow-up call versus a second email. The 42% open rate and 5.5% overall conversion rate I achieved on this campaign are benchmarks I'd aim to match or beat in a professional setting.</p>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- SALES PITCH - REDESIGNED -->
+<div class="page" id="page-pitch">
+<div class="page-section">
+<div class="section-inner">
+<div class="tag reveal">Immediate Applicability</div>
+<h2 class="heading reveal">How I Would Sell Your Product</h2>
+<p class="subtext reveal">To prove I can generate pipeline on day one, I picked a real company and broke down exactly how I'd run outbound for them. This isn't theory - it's a playbook I could execute tomorrow.</p>
+
+<div class="pitch-hero reveal">
+<div class="pitch-hero-info">
+<div class="pitch-company-name">Deposco</div>
+<div class="pitch-company-desc">Supply chain SaaS platform helping brands optimize warehouse operations, fulfillment, and inventory management. Headquartered in Alpharetta, GA. Series B funded. Competing against ShipHero, Extensiv, and Manhattan Associates.</div>
+</div>
+<div class="pitch-hero-stats">
+<div class="pitch-stat"><div class="pitch-stat-val">Series B</div><div class="pitch-stat-label">Funding</div></div>
+<div class="pitch-stat"><div class="pitch-stat-val">SMB-Mid</div><div class="pitch-stat-label">Market</div></div>
+<div class="pitch-stat"><div class="pitch-stat-val">WMS</div><div class="pitch-stat-label">Category</div></div>
+</div>
+</div>
+
+<div class="pitch-sections">
+
+<div class="pitch-card reveal">
+<div class="pitch-card-header"><div class="pitch-card-icon red">ICP</div><div class="pitch-card-label">Ideal Customer Profile</div></div>
+<div class="pitch-card-body">
+<p><strong>Company profile:</strong> Mid-market e-commerce brands and 3PLs doing $10M-$500M in annual revenue, operating 1-5 warehouses, with 100-1,000 employees. They've outgrown spreadsheets or entry-level inventory tools and are bleeding money through fulfillment errors, slow pick rates, and poor real-time visibility across locations.</p>
+<p><strong>Decision makers:</strong> VP of Operations (owns the pain), VP of Supply Chain (owns the budget), COO (signs off on platform purchases over $50K ARR). Secondary influencers: Warehouse Manager (daily user), IT Director (integration requirements).</p>
+<p><strong>Buying triggers:</strong> Opening a second warehouse, peak season failures, switching 3PL partners, investor pressure to improve unit economics, or a recent competitor outage that exposed their own vulnerability.</p>
+</div>
+</div>
+
+<div class="pitch-card reveal">
+<div class="pitch-card-header"><div class="pitch-card-icon gold">&#9888;</div><div class="pitch-card-label">Pain Points I'd Target</div></div>
+<div class="pitch-card-body">
+<p><strong>Inventory accuracy gaps:</strong> System says 500 units, shelf has 420. That delta causes oversells, stockouts, and emergency reorders at premium freight rates. I've seen this firsthand - at Tractor Supply, I audited 500+ bins and the variance was costing real money every day it went unaddressed.</p>
+<p><strong>Manual processes during peak:</strong> Companies that run fine at 500 orders/day collapse at 2,000. Manual pick sheets, paper-based receiving, and Excel-driven allocation don't scale. The pain is seasonal but the cost is year-round.</p>
+<p><strong>Multi-location blindness:</strong> Inventory sitting in Warehouse A while Warehouse B ships from a supplier because nobody has real-time cross-location visibility. This is a margin killer that ops teams know about but can't fix without better tooling.</p>
+</div>
+</div>
+
+<div class="pitch-card reveal">
+<div class="pitch-card-header"><div class="pitch-card-icon green">&#10003;</div><div class="pitch-card-label">Why I'm Credible Here</div></div>
+<div class="pitch-card-body">
+<p>I'm not pitching supply chain software from a script. I've lived inside the distribution center. I've held the scanner, counted the bins, coached the floor team, and seen what happens when inventory data is wrong: stockouts cascade, stores lose revenue, and the DC scrambles to emergency-ship replacements.</p>
+<p>When I call a VP of Operations and say "the gap between your system count and your physical count is costing you more than you think," that's not a talk track. That's a conversation I've already had with real warehouse leadership, backed by $20K+ in variance I personally identified and resolved. That credibility is the difference between a prospect hanging up and a prospect saying "tell me more."</p>
+</div>
+</div>
+
+<div class="pitch-card reveal">
+<div class="pitch-card-header"><div class="pitch-card-icon blue">&#9993;</div><div class="pitch-card-label">Sample 3-Email Outreach Sequence</div></div>
+<div class="pitch-card-body" style="padding:0">
+<div class="pitch-email-seq">
+<div class="pitch-email-step">
+<div class="pitch-email-day"><div class="pitch-email-day-num">1</div><div class="pitch-email-day-label">Day</div></div>
+<div class="pitch-email-content"><div class="pitch-email-subj">Subject: "The bin location problem costs more than you think"</div><div class="pitch-email-body">"Hi [Name], I spent last summer auditing 500+ bin locations at a Fortune 200 distribution center. The gap between system inventory and physical shelf counts was driving six figures in annual shrinkage. We fixed it through root-cause coaching and process redesign - but the fix shouldn't require an intern with a clipboard. That's exactly the problem Deposco solves at scale. Worth 15 minutes?"</div></div>
+</div>
+<div class="pitch-email-step">
+<div class="pitch-email-day"><div class="pitch-email-day-num">4</div><div class="pitch-email-day-label">Day</div></div>
+<div class="pitch-email-content"><div class="pitch-email-subj">Subject: "Re: The bin location problem"</div><div class="pitch-email-body">"Quick follow-up. I put together a one-page breakdown of the three most common inventory accuracy failures I saw inside a 2,000+ store supply chain - and how Deposco's real-time visibility addresses each one. Want me to send it over?"</div></div>
+</div>
+<div class="pitch-email-step">
+<div class="pitch-email-day"><div class="pitch-email-day-num">8</div><div class="pitch-email-day-label">Day</div></div>
+<div class="pitch-email-content"><div class="pitch-email-subj">Subject: "Closing the loop"</div><div class="pitch-email-body">"I know your inbox is a warzone. If the timing isn't right, no hard feelings. But if you're looking for a BDR who can talk to warehouse operators in their own language - not from a script - I'm here. Either way, I'll keep building."</div></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="pitch-card reveal">
+<div class="pitch-card-header"><div class="pitch-card-icon gold">&#8644;</div><div class="pitch-card-label">Objection Handling</div></div>
+<div class="pitch-card-body" style="padding:0.75rem">
+<div class="objection-grid">
+<div class="objection-card"><div class="objection-q">"We already have a WMS."</div><div class="objection-a">"That's the ideal prospect. Most companies aren't greenfield - they have a system that worked at $20M but is breaking at $80M. The question isn't whether they have a WMS. It's whether it scales when they open warehouse #2 or hit peak at 3x volume."</div></div>
+<div class="objection-card"><div class="objection-q">"Send me some info."</div><div class="objection-a">"Happy to. Quick question first: is the bigger pain point right now inventory accuracy or fulfillment speed? I want to send the case study that's actually relevant instead of a generic deck that sits unread."</div></div>
+<div class="objection-card"><div class="objection-q">"We're not looking to change vendors."</div><div class="objection-a">"Makes sense. But if their current system can't handle peak season, that conversation becomes urgent fast. I'd rather build the relationship now than race to earn trust during a crisis."</div></div>
+<div class="objection-card"><div class="objection-q">"How do you know our product?"</div><div class="objection-a">"I've studied your platform, case studies, and competitive positioning. But more importantly, I've been on the warehouse floor experiencing the exact problems Deposco solves. I didn't learn about inventory variance from a slide deck - I found $20K of it with a scanner in my hand."</div></div>
+</div>
+</div>
+</div>
+
+<div class="pitch-card reveal">
+<div class="pitch-card-header"><div class="pitch-card-icon green">&#9650;</div><div class="pitch-card-label">30-Day Ramp Plan at Deposco</div></div>
+<div class="pitch-card-body">
+<div class="ramp-timeline">
+<div class="ramp-phase active">
+<div class="ramp-phase-label">Days 1-5: Learn</div>
+<div class="ramp-phase-text">Full product deep-dive with sales engineering. Shadow top 2 BDRs on calls. Set up Salesforce dashboards. Memorize ICP criteria, competitive landscape, and top 3 case studies. Study recorded discovery calls.</div>
+<div class="ramp-phase-target">Goal: product fluency</div>
+</div>
+<div class="ramp-phase active">
+<div class="ramp-phase-label">Days 6-15: Build</div>
+<div class="ramp-phase-text">Construct first 50 target accounts via Sales Navigator (e-commerce/3PL, 100-1K employees, warehouse manager job postings as growth signals). Write personalized first-touch emails. Begin calling warm inbound leads.</div>
+<div class="ramp-phase-target">Target: 40+ dials/day, 25+ emails, 5+ LinkedIn touches</div>
+</div>
+<div class="ramp-phase">
+<div class="ramp-phase-label">Days 16-25: Execute</div>
+<div class="ramp-phase-text">Full outbound cadence. Multi-thread into accounts (VP Ops + Warehouse Manager + IT Director). A/B test operational-credibility angle vs. pure ROI angle. Track which subject lines and openers convert.</div>
+<div class="ramp-phase-target">Target: 3-5 qualified meetings booked</div>
+</div>
+<div class="ramp-phase">
+<div class="ramp-phase-label">Days 26-30: Optimize</div>
+<div class="ramp-phase-text">Analyze conversion data. Document what's working in a personal playbook. Present findings to BDR manager with Month 2 messaging recommendations.</div>
+<div class="ramp-phase-target">Target: 8 total meetings, clear vertical/persona conversion data</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+<!-- SKILLS -->
+<div class="page" id="page-skills">
+<div class="page-section">
+<div class="section-inner">
+<div class="tag reveal">My Toolkit</div>
+<h2 class="heading reveal">Skills & Certifications</h2>
+<p class="subtext reveal">Not just what I know. How I use it.</p>
+<div class="skills-grid reveal">
+<div class="skill-group"><div class="skill-group-title">CRM & Sales Tools</div><div class="skill-item"><span class="skill-name">Salesforce CRM</span><span class="skill-how">Lead tracking, pipeline management, reporting</span></div><div class="skill-item"><span class="skill-name">HubSpot</span><span class="skill-how">Sequence building, contact management, analytics</span></div><div class="skill-item"><span class="skill-name">LinkedIn Sales Navigator</span><span class="skill-how">Account targeting, lead filtering, InMail outreach</span></div><div class="skill-item"><span class="skill-name">Cold Outreach</span><span class="skill-how">Multi-channel cadences: email, call, LinkedIn, video</span></div><div class="skill-item"><span class="skill-name">Pipeline Management</span><span class="skill-how">Stage tracking, forecast accuracy, activity logging</span></div></div>
+<div class="skill-group"><div class="skill-group-title">Analytics & Operations</div><div class="skill-item"><span class="skill-name">Power BI</span><span class="skill-how">Dashboard building, KPI visualization</span></div><div class="skill-item"><span class="skill-name">Excel (Advanced)</span><span class="skill-how">Pivot tables, VLOOKUP/XLOOKUP, data modeling</span></div><div class="skill-item"><span class="skill-name">Manhattan WMS</span><span class="skill-how">Warehouse management, inventory tracking</span></div><div class="skill-item"><span class="skill-name">Supply Chain Analysis</span><span class="skill-how">Route optimization, cost modeling, KPI analysis</span></div></div>
+<div class="skill-group"><div class="skill-group-title">Leadership</div><div class="skill-item"><span class="skill-name">Team Leadership</span><span class="skill-how">Led 20-30 person shifts daily at Fortune 200</span></div><div class="skill-item"><span class="skill-name">Cross-Functional Coordination</span><span class="skill-how">Logistics, merchandising, receiving alignment</span></div><div class="skill-item"><span class="skill-name">Training & Development</span><span class="skill-how">Onboarded new hires on full production workflow</span></div><div class="skill-item"><span class="skill-name">Public Speaking</span><span class="skill-how">Presented to 100+ students on awareness campaigns</span></div></div>
+</div>
+<h3 class="heading-sm reveal">Certifications</h3>
+<div class="cert-grid reveal">
+<div class="cert-card"><div class="cert-name">Sales Enablement Certification</div><div class="cert-issuer">HubSpot Academy</div><div class="cert-status">Completed</div></div>
+<div class="cert-card"><div class="cert-name">Sales Management Certification</div><div class="cert-issuer">HubSpot Academy</div><div class="cert-status">Completed</div></div>
+<div class="cert-card"><div class="cert-name">Inbound Sales Certification</div><div class="cert-issuer">HubSpot Academy</div><div class="cert-status">Completed</div></div>
+<div class="cert-card"><div class="cert-name">SDR Professional Certificate</div><div class="cert-issuer">Salesforce / Coursera</div><div class="cert-status">In Progress</div></div>
+</div>
+<h3 class="heading-sm reveal">Education</h3>
+<div class="edu-grid reveal">
+<div class="edu-card"><div class="edu-degree">Master of Business Administration</div><div class="edu-school">Mercer University, Atlanta, GA</div><div class="edu-date">May 2027</div><div class="edu-detail">Accelerated MBA program. Concentration in Entrepreneurship and Innovation.</div></div>
+<div class="edu-card"><div class="edu-degree">BBA in Management</div><div class="edu-school">Mercer University, Macon, GA</div><div class="edu-date">May 2026</div><div class="edu-detail">Major GPA: 3.67. Dean's List (x2). Merit Scholarship Recipient. Stetson-Hatcher School of Business.</div></div>
+</div>
+<h3 class="heading-sm reveal">Leadership & Community</h3>
+<div class="lead-grid reveal">
+<div class="lead-card"><div class="lead-role">Social Chair</div><div class="lead-org">Phi Delta Theta, Mercer University</div><div class="lead-date">Mar. 2024 - Present</div><div class="lead-desc">Coordinated chapter events and managed relationships with campus organizations, vendors, and community partners, developing negotiation and logistics skills across a 50+ member fraternity.</div></div>
+<div class="lead-card"><div class="lead-role">Student Volunteer</div><div class="lead-org">Traffick Jam</div><div class="lead-date">Jan. 2025 - May 2025</div><div class="lead-desc">Delivered human-trafficking prevention presentations at local high schools, building public-speaking and persuasion skills in front of 100+ students.</div></div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- CONTACT -->
+<div class="page" id="page-contact">
+<div class="page-section">
+<div class="section-inner">
+<div class="contact-center">
+<div class="tag reveal">Let's Connect</div>
+<h2 class="heading reveal">Ready to generate pipeline<br>for your team.</h2>
+<p class="subtext reveal" style="margin:0 auto 2rem;text-align:center">I'm actively seeking Summer 2026 BDR and sales development opportunities in the Atlanta metro area.</p>
+<div class="contact-links reveal"><a href="https://linkedin.com/in/phelpscolby" class="contact-link" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a></div>
+<div class="avail-badge reveal">Available full-time or for internships: May 11 - August 17, 2026</div>
+<div class="avail-note reveal">Available part-time during the academic year while completing MBA (graduating May 2027)</div>
+</div>
+</div>
+</div>
+</div>
+
+<footer>&copy; 2026 Colby Phelps. Built with intention, not a template.</footer>
+
+<script>
+function showPage(name){
+document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+document.getElementById('page-'+name).classList.add('active');
+document.querySelectorAll('.nav-links a').forEach(a=>{a.classList.toggle('active',a.dataset.page===name)});
+document.querySelector('.nav-links').classList.remove('open');
+window.scrollTo(0,0);
+setTimeout(()=>{document.querySelectorAll('#page-'+name+' .reveal').forEach(el=>{observer.observe(el)})},50);
+}
+const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:0.08});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
